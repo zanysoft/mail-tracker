@@ -1,0 +1,56 @@
+{
+    "name": "zanysoft/mail-tracker",
+    "type": "library",
+    "description": "Logs and tracks all outgoing emails from Laravel",
+    "keywords": [
+        "laravel",
+        "zanysoft",
+        "MailTracker"
+    ],
+    "homepage": "https://github.com/zanysoft/mail-tracker",
+    "license": "MIT",
+    "authors": [{
+        "name": "Mubashar Ahmad",
+        "email": "mubasharahmad79@hotmail.com",
+        "homepage": "https://zanysoft.net",
+        "role": "Developer"
+    }],
+    "require": {
+        "php": ">=7.1",
+        "illuminate/support": "~6.0|~7.0|~8.0",
+        "guzzlehttp/guzzle": "^5.3.1|^6.2.1|^7.0",
+        "aws/aws-php-sns-message-validator": "^1.1",
+        "aws/aws-sdk-php": "^3.133"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~7.0|~8.0",
+        "orchestra/testbench": "~4.0|~5.0|~6.0",
+        "mockery/mockery": "^1.1"
+    },
+    "suggest": {
+        "fedeisas/laravel-mail-css-inliner": "Automatically inlines CSS into all outgoing mail."
+    },
+    "autoload": {
+        "psr-4": {
+            "ZanySoft\\MailTracker\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ZanySoft\\MailTracker\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        },
+        "laravel": {
+            "providers": [
+                "ZanySoft\\MailTracker\\MailTrackerServiceProvider"
+            ]
+        }
+    }
+}
